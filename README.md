@@ -5,13 +5,13 @@ Collection of little helper functions or code snippets in R
 
 
 ### Statistics
-```{r}
+```r
 cv          <- function(x) sd(x, na.rm=T) / mean(x, na.rm =T)
 zv          <- function(x) (x - mean(x, na.rm =T)) / sd(x, na.rm=T)
 ```
 
 ### Date/Time
-```{r}
+```R
 create_ymd  <- function(x) tibble(year=year(x),month=month(x),day=day(x))
 
 ```

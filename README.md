@@ -19,7 +19,7 @@ create_ymd  <- function(x) tibble(year=year(x),month=month(x),day=day(x))
 
 ### Hydrology-specific
 
-```{r}
+```r
 
 # ----- Flashiness Index -----
 flash       <- function(x) sum(abs(diff(x)),na.rm=T) / sum(x[2:length(x)],na.rm=T) # R B Index

@@ -15,7 +15,14 @@ zv          <- function(x) (x - mean(x, na.rm =T)) / sd(x, na.rm=T)
 create_ymd  <- function(x) tibble(year=year(x),month=month(x),day=day(x))
 
 ```
-
+### Data wrangling
+```R
+which.min.na <- function(x) {
+  idx <- which.min(x)
+  if(!length(idx)) idx <- NA
+  return(idx)
+}
+```
 
 ### Hydrology-specific
 
